@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { bindTo } = require('../lib/utils');
+const { bindTo, invoke } = require('../lib/utils');
 
 
 describe('utils', () => {
@@ -17,5 +17,14 @@ describe('utils', () => {
     assert.doesNotThrow(bindTo.bind(null, obj, 'undefined'));
     assert.equal(result1, obj, 'bound 1st func');
     assert.equal(result2, obj, 'bound 2nd func');
+  });
+
+  it('invoke', () => {
+    let a = 0;
+    const func = (newValue) => { a = newValue; };
+
+    invoke(func, 1);
+    assert.equal(a, 1, 'call function with passing args');
+    assert.doesNotThrow(invoke, 'not function');
   });
 });
