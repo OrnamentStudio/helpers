@@ -1,3 +1,24 @@
+const STYLES_PREFIXES = {
+  transform: ['Webkit', 'ms'],
+};
+
+const capitalizeFirst = (string = '') => string.charAt(0).toUpperCase() + string.slice(1);
+
+export const getPrefixed = (styles) => {
+  const result = { ...styles };
+
+  Object.keys(styles).forEach((key) => {
+    if (!STYLES_PREFIXES[key]) return;
+
+    STYLES_PREFIXES[key].forEach((prefix) => {
+      // react uses camelCase
+      result[`${prefix}${capitalizeFirst(key)}`] = styles[key];
+    });
+  });
+
+  return result;
+};
+
 export const documentOffset = (documentContainer, node) => {
   if (!documentContainer || !node) throw new Error('Both documentContainer and node are required');
   if (typeof node.getBoundingClientRect !== 'function') throw new Error('Wrong arguments order');
