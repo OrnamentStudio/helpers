@@ -77,3 +77,22 @@ export const onFrameRequest = (node, func) => {
     });
   };
 };
+
+export const offset = (node) => {
+  if (!node) {
+    return {
+      top: 0,
+      left: 0,
+    };
+  }
+
+  const { offsetParent } = node;
+
+  const offsetTop = offsetParent ? offsetParent.offsetTop : 0;
+  const offsetLeft = offsetParent ? offsetParent.offsetLeft : 0;
+
+  return {
+    top: node.offsetTop + offsetTop,
+    left: node.offsetLeft + offsetLeft,
+  };
+};
