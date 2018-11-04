@@ -96,3 +96,11 @@ export const offset = (node) => {
     left: node.offsetLeft + offsetLeft,
   };
 };
+
+export const eventCoordinates = (event, ...args) => {
+  const prop = event.touches ? event.touches[0] : event;
+  return args.reduce((acc, name) => {
+    acc[name] = prop[name];
+    return acc;
+  }, {});
+};
