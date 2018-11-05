@@ -1,6 +1,6 @@
 {
   "name": "ornament-helpers",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Helpers",
   "scripts": {
     "prepublishOnly": "npm run build",
