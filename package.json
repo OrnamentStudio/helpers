@@ -23,14 +23,13 @@
     "node": "^8.x.x"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-runtime": "6.23.0",
-    "babel-preset-env": "1.7.0",
-    "babel-preset-stage-3": "6.24.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "chai": "^4.2.0",
-    "eslint": "^5.7.0",
+    "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0"
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.0.2"
   }
 }
