@@ -1,5 +1,6 @@
 const STYLES_PREFIXES = {
   transform: ['Webkit', 'ms'],
+  transitionDuration: ['Webkit', 'Moz', 'ms', 'O'],
 };
 
 const capitalizeFirst = (string = '') => string.charAt(0).toUpperCase() + string.slice(1);
