@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { bindTo, invoke } = require('../lib/utils');
+const { bindTo, invoke } = require('../utils');
 
 
 describe('utils', () => {

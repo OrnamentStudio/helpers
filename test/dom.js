@@ -1,7 +1,7 @@
 const { assert } = require('chai');
 const {
   onFrameRequest,
-} = require('../lib/dom');
+} = require('../dom');
 
 
 describe('dom', () => {
@@ -9,7 +9,7 @@ describe('dom', () => {
     let queue = [];
 
     const processQueue = () => {
-      queue.forEach((func) => func());
+      queue.forEach(func => func());
       queue = [];
     };
 

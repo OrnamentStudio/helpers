@@ -1,13 +1,12 @@
 {
   "name": "ornament-helpers",
   "version": "1.1.0",
-  "description": "Helpers",
+  "description": "Various helpers",
+  "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm run build",
-    "build": "NODE_ENV=production babel src --out-dir lib --copy-files",
-    "start": "npm run build -- --watch",
-    "test": "npm run build && mocha \"test/**/*.js\"",
-    "lint": "npm run build && eslint --ext .es,.js --ignore-path .eslintignore --format codeframe ./"
+    "test": "npm run lint && npm run mocha",
+    "mocha": "mocha",
+    "lint": "eslint --format codeframe ./"
   },
   "repository": {
     "type": "git",
@@ -23,15 +22,10 @@
     "node": "^8.x.x"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/runtime": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
     "chai": "^4.2.0",
-    "eslint": "^5.15.1",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "mocha": "^6.0.2"
+    "eslint-plugin-import": "^2.17.3",
+    "mocha": "^6.1.4"
   }
 }
