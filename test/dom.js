@@ -9,7 +9,7 @@ describe('dom', () => {
     let queue = [];
 
     const processQueue = () => {
-      queue.forEach(func => func());
+      queue.forEach((func) => func());
       queue = [];
     };
 

@@ -35,7 +35,7 @@ exports.documentOffset = (documentContainer, node) => {
   };
 };
 
-exports.size = node => ({
+exports.size = (node) => ({
   width: node.offsetWidth,
   height: node.offsetHeight,
 });
@@ -60,7 +60,7 @@ exports.scroll = (node) => {
   };
 };
 
-exports.screenSize = node => ({
+exports.screenSize = (node) => ({
   width: node.document.documentElement.clientWidth,
   height: node.document.documentElement.clientHeight,
 });
@@ -98,7 +98,7 @@ exports.offset = (node) => {
   };
 };
 
-exports.position = node => ({
+exports.position = (node) => ({
   left: node.offsetLeft,
   top: node.offsetTop,
 });
