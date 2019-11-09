@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/OrnamentStudio/helpers#readme",
   "engines": {
-    "node": "^8.x.x"
+    "node": "^12.x.x"
   },
   "devDependencies": {
     "chai": "^4.2.0",
