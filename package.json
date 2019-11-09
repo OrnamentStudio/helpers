@@ -1,6 +1,6 @@
 {
   "name": "ornament-helpers",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Various helpers",
   "main": "index.js",
   "scripts": {
