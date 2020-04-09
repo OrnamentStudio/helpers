@@ -22,9 +22,12 @@ describe('utils', () => {
   it('invoke', () => {
     let a = 0;
     const func = (newValue) => { a = newValue; };
+    const returnedValue = () => 1;
 
     invoke(func, 1);
+
     assert.equal(a, 1, 'call function with passing args');
+    assert.equal(invoke(returnedValue), 1, 'return result from func');
     assert.doesNotThrow(invoke, 'not function');
   });
 });
